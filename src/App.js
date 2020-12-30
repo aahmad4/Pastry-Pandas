@@ -25,6 +25,24 @@ export default function App() {
     setCart(item.cart);
   };
 
+  const handleUpdateCartQuantity = async (productId, quantity) => {
+    const updatedItem = await commerce.cart.update(productId, { quantity });
+
+    setCart(updatedItem.cart);
+  };
+
+  const handleRemoveFromCart = async (productId) => {
+    const removedItem = await commerce.cart.remove(productId);
+
+    setCart(removedItem.cart);
+  };
+
+  const handleEmptyCart = async () => {
+    const emptiedCart = await commerce.cart.empty();
+
+    setCart(emptiedCart.cart);
+  };
+
   useEffect(() => {
     fetchProducts();
     fetchCart();
