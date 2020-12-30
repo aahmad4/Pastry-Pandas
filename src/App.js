@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { CssBaseline } from "@material-ui/core";
 import { commerce } from "./lib/commerce";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Products, Navbar, Cart, Checkout } from "./components";
@@ -72,7 +73,8 @@ export default function App() {
 
   return (
     <Router>
-      <div>
+      <div style={{ display: "flex" }}>
+        <CssBaseline />
         <Navbar totalItems={cart.total_items} />
         <Switch>
           <Route exact path="/">
