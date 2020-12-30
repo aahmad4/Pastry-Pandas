@@ -13,63 +13,59 @@ export default function Cart({
 }) {
   const classes = useStyles();
 
-  const EmptyCart = () => {
-    return (
-      <Typography variant="subtitle1">
-        You have no items in your shopping cart,
-        <Link to="/" className={classes.link}>
-          {" "}
-          start adding some!
-        </Link>
-      </Typography>
-    );
-  };
+  const EmptyCart = () => (
+    <Typography variant="subtitle1">
+      You have no items in your shopping cart,
+      <Link to="/" className={classes.link}>
+        {" "}
+        start adding some!
+      </Link>
+    </Typography>
+  );
 
-  const FilledCart = () => {
-    return (
-      <React.Fragment>
-        <Grid container spacing={3}>
-          {cart.line_items.map((item) => (
-            <Grid item xs={12} sm={4} key={item.id}>
-              <CardItem
-                item={item}
-                handleUpdateCartQuantity={handleUpdateCartQuantity}
-                handleRemoveFromCart={handleRemoveFromCart}
-              />
-            </Grid>
-          ))}
-        </Grid>
-        <div className={classes.cardDetails}>
-          <Typography variant="h4">
-            Subtotal: {cart.subtotal.formatted_with_symbol}
-          </Typography>
-          <div>
-            <Button
-              className={classes.emptyButton}
-              size="large"
-              type="button"
-              variant="contained"
-              color="secondary"
-              onClick={handleEmptyCart}
-            >
-              Empty Cart
-            </Button>
-            <Button
-              component={Link}
-              to="/checkout"
-              className={classes.checkoutButton}
-              size="large"
-              type="button"
-              variant="contained"
-              color="primary"
-            >
-              Checkout
-            </Button>
-          </div>
+  const FilledCart = () => (
+    <React.Fragment>
+      <Grid container spacing={3}>
+        {cart.line_items.map((item) => (
+          <Grid item xs={12} sm={4} key={item.id}>
+            <CardItem
+              item={item}
+              handleUpdateCartQuantity={handleUpdateCartQuantity}
+              handleRemoveFromCart={handleRemoveFromCart}
+            />
+          </Grid>
+        ))}
+      </Grid>
+      <div className={classes.cardDetails}>
+        <Typography variant="h4">
+          Subtotal: {cart.subtotal.formatted_with_symbol}
+        </Typography>
+        <div>
+          <Button
+            className={classes.emptyButton}
+            size="large"
+            type="button"
+            variant="contained"
+            color="secondary"
+            onClick={handleEmptyCart}
+          >
+            Empty Cart
+          </Button>
+          <Button
+            component={Link}
+            to="/checkout"
+            className={classes.checkoutButton}
+            size="large"
+            type="button"
+            variant="contained"
+            color="primary"
+          >
+            Checkout
+          </Button>
         </div>
-      </React.Fragment>
-    );
-  };
+      </div>
+    </React.Fragment>
+  );
 
   if (!cart.line_items) return <p>"Loading..."</p>;
 
