@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Pastry Pandas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An e-commerce website made with React.js, Material-UI, Commerce.js, and The Stripe API.
 
-## Available Scripts
+## Summary
 
-In the project directory, you can run:
+  - [Getting Started](#getting-started)
+  - [Built With](#built-with)
+  - [Contributing](#contributing)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Setup
 
-### `npm test`
+A step by step series of examples that tell you how to get a development env running.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Clone
 
-### `npm run build`
+```sh
+$ git clone https://github.com/aahmad4/Pastry-Pandas
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Use the package manager [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) to install the required packages.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+$ npm install
+```
 
-### `npm run eject`
+or
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+$ yarn install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+$ npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Implementation
 
-## Learn More
+In the root directory create a file named `.env` with the following enviornment variables. To obtain the proper credentials, register an account at Commercejs and Stripe, then fill them out in this file once obtained.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```env
+REACT_APP_CHEC_PUBLIC_KEY = 
+REACT_APP_STRIPE_PUBLIC_KEY = 
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Built With
 
-### Code Splitting
+* [React.js](https://reactjs.org/) - Front-end web library
+* [Material-UI](https://material-ui.com/) - React UI framework
+* [Commerce.js](https://commercejs.com/) - Flexible e-commerce API
+* [Stripe](https://stripe.com/) - Online payment system
+* [Netlify](https://www.netlify.com/) - Powerful serverless platform
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Please make sure to update tests as appropriate.
